@@ -11,8 +11,8 @@ import Alamofire
 
 
 protocol TuringRobotDelegate: class {
-    func updateResponseData()
-    func updateUI()
+//    func updateResponseData()
+    func updateUIAndData()
 }
 
 class TuringRobot {
@@ -46,8 +46,7 @@ class TuringRobot {
         Alamofire.request(.POST, "http://www.tuling123.com/openapi/api", parameters: userQuery, encoding: .JSON).validate().responseJSON { response in
             if let resultValue = response.result.value {
                 self.responseData = self.jsonHandle.handleTheRobotData(resultValue)
-                self.delegate?.updateResponseData()
-                self.delegate?.updateUI()
+                self.delegate?.updateUIAndData()
                 
             }
         }

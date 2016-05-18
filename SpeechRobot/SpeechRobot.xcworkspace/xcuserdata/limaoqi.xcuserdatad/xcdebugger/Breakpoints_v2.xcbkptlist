@@ -164,11 +164,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SpeechRobot/ChatViewController.swift"
-            timestampString = "485243273.882646"
+            timestampString = "485244569.25549"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "185"
-            endingLineNumber = "185">
+            startingLineNumber = "187"
+            endingLineNumber = "187">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -178,27 +178,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SpeechRobot/ChatViewController.swift"
-            timestampString = "485243273.882646"
+            timestampString = "485244569.25549"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
-            landmarkName = "updateTheResponse()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SpeechRobot/ChatViewController.swift"
-            timestampString = "485243348.542785"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
             landmarkName = "onResults(_:isLast:)"
             landmarkType = "5">
          </BreakpointContent>

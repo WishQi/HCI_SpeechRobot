@@ -12,10 +12,14 @@ class ChatViewController: UIViewController, IFlySpeechRecognizerDelegate, IFlySp
     
     var iflySpeechRecognizer = IFlySpeechRecognizer()
     var iflySpeechSynthesizer = IFlySpeechSynthesizer()
+    
     var superView = UIView()
     
     var beginSpeakingButton = UIButton()
     var stopSpeakingButton = UIButton()
+    
+    var recognizeResultsTextView = UITextView()
+    var responseResultsTextView = UITextView()
     
     var recognizedResults = ""
     var speechRobotWords = ""
@@ -25,12 +29,6 @@ class ChatViewController: UIViewController, IFlySpeechRecognizerDelegate, IFlySp
     
     var responseData = TuringRobot.ResponseData()
     
-//    var turingRobotDelegate: TuringRobotDelegate?
-    
-    
-    var recognizeResultsTextView = UITextView()
-    var responseResultsTextView = UITextView()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         superView = self.view
@@ -116,21 +114,10 @@ class ChatViewController: UIViewController, IFlySpeechRecognizerDelegate, IFlySp
         iflySpeechSynthesizer.setParameter("tts.pcm", forKey: "/Users/limaoqi/Documents/用户技术/Voices")
     }
     
-    func updateUI() {
-        recognizeResultsTextView.text = recognizedResults
-        updateTheResponse()
-        responseResultsTextView.text = speechRobotWords
-    }
     
-    func sendTheUserWordsToTuringRobot() {
-        turingRobot.getTheUserWords(recognizedResults)
-    }
-    
-    func updateResponseData() {
+    //SpeechRobot的delegate的函数
+    func updateUIAndData() {
         responseData = turingRobot.getTheData()
-    }
-    
-    func updateTheResponse() {
         if responseData.text != "" {
             speechRobotWords = responseData.text
         }
@@ -146,6 +133,14 @@ class ChatViewController: UIViewController, IFlySpeechRecognizerDelegate, IFlySp
         if responseData.detailurl != "" {
             speechRobotWords += responseData.detailurl
         }
+        responseResultsTextView.text = speechRobotWords
+        recognizedResults = ""
+        iflySpeechSynthesizer.startSpeaking(speechRobotWords)
+    }
+    
+    
+    func sendTheUserWordsToTuringRobot() {
+        turingRobot.getTheUserWords(recognizedResults)
     }
     
     //IFlySpeechRecognizerDelegate 识别代理
@@ -156,8 +151,8 @@ class ChatViewController: UIViewController, IFlySpeechRecognizerDelegate, IFlySp
         }
         if isLast {
             sendTheUserWordsToTuringRobot()
+            recognizeResultsTextView.text = recognizedResults
         }
-        print(recognizedResults)
     }
     
     func onEndOfSpeech() {
@@ -166,15 +161,8 @@ class ChatViewController: UIViewController, IFlySpeechRecognizerDelegate, IFlySp
     
     func onError(errorCode: IFlySpeechError!) {
     }
-    
-    // IFlySpeechSynthesizerDelegate 实现代理
+
     func onCompleted(error: IFlySpeechError!) {
-        recognizedResults = ""
-        speechRobotWords = ""
-    }
-    
-    func onBeginOfSpeech() {
-        print("xixi")
     }
 
 }
