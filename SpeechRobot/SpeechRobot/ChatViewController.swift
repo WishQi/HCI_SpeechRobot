@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChatViewController: UIViewController, IFlySpeechRecognizerDelegate, IFlySpeechSynthesizerDelegate {
+class ChatViewController: UIViewController, IFlySpeechRecognizerDelegate, IFlySpeechSynthesizerDelegate, TuringRobotDelegate {
     
     var iflySpeechRecognizer = IFlySpeechRecognizer()
     var iflySpeechSynthesizer = IFlySpeechSynthesizer()
@@ -25,6 +25,8 @@ class ChatViewController: UIViewController, IFlySpeechRecognizerDelegate, IFlySp
     
     var responseData = TuringRobot.ResponseData()
     
+//    var turingRobotDelegate: TuringRobotDelegate?
+    
     
     var recognizeResultsTextView = UITextView()
     var responseResultsTextView = UITextView()
@@ -32,6 +34,8 @@ class ChatViewController: UIViewController, IFlySpeechRecognizerDelegate, IFlySp
     override func viewDidLoad() {
         super.viewDidLoad()
         superView = self.view
+        
+        turingRobot.delegate = self
         
         configureUI()
         
@@ -63,7 +67,7 @@ class ChatViewController: UIViewController, IFlySpeechRecognizerDelegate, IFlySp
         stopSpeakingButton.layer.cornerRadius = 10
         
         superView.addSubview(recognizeResultsTextView)
-        recognizeResultsTextView.frame.size = CGSize(width: 200, height: 150)
+        recognizeResultsTextView.frame.size = CGSize(width: 200, height: 100)
         recognizeResultsTextView.frame.origin.y = stopSpeakingButton.frame.maxY + 10
         recognizeResultsTextView.center.x = superView.center.x
         recognizeResultsTextView.backgroundColor = UIColor.clearColor()
@@ -74,7 +78,7 @@ class ChatViewController: UIViewController, IFlySpeechRecognizerDelegate, IFlySp
         
         superView.addSubview(responseResultsTextView)
         responseResultsTextView.frame.size = CGSize(width: 200, height: 100)
-        responseResultsTextView.center.y = superView.center.y - 100
+        responseResultsTextView.center.y = superView.center.y - 120
         responseResultsTextView.center.x = superView.center.x
         responseResultsTextView.backgroundColor = UIColor.clearColor()
         responseResultsTextView.textColor = UIColor.blackColor()
@@ -144,7 +148,7 @@ class ChatViewController: UIViewController, IFlySpeechRecognizerDelegate, IFlySp
         }
     }
     
-    //IFlySpeechRecognizerDelegate识别代理
+    //IFlySpeechRecognizerDelegate 识别代理
     func onResults(results: [AnyObject]!, isLast: Bool) {
         print("xixi")
         if results != nil {
@@ -152,14 +156,12 @@ class ChatViewController: UIViewController, IFlySpeechRecognizerDelegate, IFlySp
         }
         if isLast {
             sendTheUserWordsToTuringRobot()
-            updateResponseData()
-            updateUI()
         }
         print(recognizedResults)
     }
     
     func onEndOfSpeech() {
-//        print("xixi")
+        print("xixi")
     }
     
     func onError(errorCode: IFlySpeechError!) {

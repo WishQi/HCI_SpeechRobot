@@ -11,8 +11,6 @@ import SwiftyJSON
 
 class HandleJson {
     
-//    var robotData = TuringRobot.ResponseData()
-    
     func handleTheRobotData(data: AnyObject) -> TuringRobot.ResponseData {
         var robotData = TuringRobot.ResponseData()
         var json = JSON(data)

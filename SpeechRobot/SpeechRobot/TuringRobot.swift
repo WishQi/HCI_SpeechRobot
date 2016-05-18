@@ -9,6 +9,12 @@
 import Foundation
 import Alamofire
 
+
+protocol TuringRobotDelegate: class {
+    func updateResponseData()
+    func updateUI()
+}
+
 class TuringRobot {
     
     struct ResponseData {
@@ -19,20 +25,20 @@ class TuringRobot {
         var detailurl = ""
     }
     
+    var responseData = ResponseData()
+    
     var jsonHandle = HandleJson()
+    
+    weak var delegate: TuringRobotDelegate?
     
     var userQuery = ["key": "cee54e1c065f98fca96054d0586ebb88",
                      "info": ""]
     
-    var responseData = ResponseData()
     
-    init() {
-        Alamofire.request(.POST, "hhtp://www.tuling123.com/openapi/api")
-    }
     
     func getTheUserWords(userWords: String) {
         userQuery["info"] = userWords
-        self.handleTheRequest()
+        handleTheRequest()
     }
     
     func handleTheRequest() {
@@ -40,6 +46,9 @@ class TuringRobot {
         Alamofire.request(.POST, "http://www.tuling123.com/openapi/api", parameters: userQuery, encoding: .JSON).validate().responseJSON { response in
             if let resultValue = response.result.value {
                 self.responseData = self.jsonHandle.handleTheRobotData(resultValue)
+                self.delegate?.updateResponseData()
+                self.delegate?.updateUI()
+                
             }
         }
         
