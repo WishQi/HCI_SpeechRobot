@@ -1,0 +1,6 @@
+framework module Pods_SpeechRobot {
+  umbrella header "Pods-SpeechRobot-umbrella.h"
+
+  export *
+  module * { export * }
+}
