@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import SwiftyJSON
 
-class ViewController: UIViewController, IFlySpeechRecognizerDelegate, IFlySpeechSynthesizerDelegate {
+class ChatViewController: UIViewController, IFlySpeechRecognizerDelegate, IFlySpeechSynthesizerDelegate {
     
     var iflySpeechRecognizer = IFlySpeechRecognizer()
     var iflySpeechSynthesizer = IFlySpeechSynthesizer()
@@ -22,6 +21,7 @@ class ViewController: UIViewController, IFlySpeechRecognizerDelegate, IFlySpeech
     var speechRobotWords = ""
     
     let turingRobot = TuringRobot()
+    let jsonHandle = HandleJson()
     
     var responseData = TuringRobot.ResponseData()
     
@@ -148,18 +148,7 @@ class ViewController: UIViewController, IFlySpeechRecognizerDelegate, IFlySpeech
     func onResults(results: [AnyObject]!, isLast: Bool) {
         print("xixi")
         if results != nil {
-            if let path = JSON(results)[0].first?.0 {
-                if let dataFromString = path.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
-                    let json = JSON(data: dataFromString)
-                    print(json)
-                    let ws = json["ws"]
-                    for (index, _): (String, JSON) in ws {
-                        if let indexOfSubJson = Int(index) {
-                            recognizedResults += ws[indexOfSubJson]["cw"][0]["w"].stringValue
-                        }
-                    }
-                }
-            }
+            recognizedResults = jsonHandle.handleTheUserWords(results, previous: recognizedResults)
         }
         if isLast {
             sendTheUserWordsToTuringRobot()
@@ -170,15 +159,10 @@ class ViewController: UIViewController, IFlySpeechRecognizerDelegate, IFlySpeech
     }
     
     func onEndOfSpeech() {
-        print("xixi")
+//        print("xixi")
     }
     
     func onError(errorCode: IFlySpeechError!) {
-        let xixi = errorCode.accessibilityHint
-        print(xixi)
-        let json = JSON(errorCode)
-        print(json)
-        print(errorCode)
     }
     
     // IFlySpeechSynthesizerDelegate 实现代理
@@ -190,25 +174,6 @@ class ViewController: UIViewController, IFlySpeechRecognizerDelegate, IFlySpeech
     func onBeginOfSpeech() {
         print("xixi")
     }
-    
-    
-//    func onVolumeChanged(volume: Int32) {
-//        
-//    }
-//    
-    
-//
-//    func onSpeakBegin() {
-//        
-//    }
-//    
-//    func onBufferProgress(progress: Int32, message msg: String!) {
-//        
-//    }
-//    
-//    func onSpeakProgress(progress: Int32) {
-//        
-//    }
 
 }
 

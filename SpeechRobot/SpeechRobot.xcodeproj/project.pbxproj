@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		52178E87FFC80B18B303A5B7 /* Pods_SpeechRobot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2FADC816A3E06E36650A26 /* Pods_SpeechRobot.framework */; };
 		F8132D5F1CE9B88800E33B5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8132D5E1CE9B88800E33B5B /* AppDelegate.swift */; };
-		F8132D611CE9B88800E33B5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8132D601CE9B88800E33B5B /* ViewController.swift */; };
+		F8132D611CE9B88800E33B5B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8132D601CE9B88800E33B5B /* ChatViewController.swift */; };
 		F8132D641CE9B88800E33B5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8132D621CE9B88800E33B5B /* Main.storyboard */; };
 		F8132D671CE9B88800E33B5B /* SpeechRobot.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8132D651CE9B88800E33B5B /* SpeechRobot.xcdatamodeld */; };
 		F8132D691CE9B88800E33B5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8132D681CE9B88800E33B5B /* Assets.xcassets */; };
 		F8132D6C1CE9B88800E33B5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8132D6A1CE9B88800E33B5B /* LaunchScreen.storyboard */; };
 		F8132D771CE9B88800E33B5B /* SpeechRobotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8132D761CE9B88800E33B5B /* SpeechRobotTests.swift */; };
 		F8132D821CE9B88800E33B5B /* SpeechRobotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8132D811CE9B88800E33B5B /* SpeechRobotUITests.swift */; };
+		F82795D51CEC10BE00FD887B /* HandleJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82795D41CEC10BE00FD887B /* HandleJson.swift */; };
 		F88286691CEB5E34001575B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88286681CEB5E34001575B7 /* Foundation.framework */; };
 		F882866B1CEB5E4C001575B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F882866A1CEB5E4C001575B7 /* UIKit.framework */; };
 		F88B92D91CE9BE45009A4874 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88B92D81CE9BE45009A4874 /* iflyMSC.framework */; };
@@ -55,7 +56,7 @@
 		CA9946F8DC6E58C866BEA678 /* Pods-SpeechRobot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeechRobot.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpeechRobot/Pods-SpeechRobot.release.xcconfig"; sourceTree = "<group>"; };
 		F8132D5B1CE9B88800E33B5B /* SpeechRobot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeechRobot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8132D5E1CE9B88800E33B5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F8132D601CE9B88800E33B5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F8132D601CE9B88800E33B5B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		F8132D631CE9B88800E33B5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F8132D661CE9B88800E33B5B /* SpeechRobot.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SpeechRobot.xcdatamodel; sourceTree = "<group>"; };
 		F8132D681CE9B88800E33B5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,6 +68,7 @@
 		F8132D7D1CE9B88800E33B5B /* SpeechRobotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeechRobotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8132D811CE9B88800E33B5B /* SpeechRobotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRobotUITests.swift; sourceTree = "<group>"; };
 		F8132D831CE9B88800E33B5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F82795D41CEC10BE00FD887B /* HandleJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandleJson.swift; sourceTree = "<group>"; };
 		F88286681CEB5E34001575B7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F882866A1CEB5E4C001575B7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F88B92D71CE9BCEB009A4874 /* SpeechRobot-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpeechRobot-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -180,7 +182,8 @@
 			isa = PBXGroup;
 			children = (
 				F8132D5E1CE9B88800E33B5B /* AppDelegate.swift */,
-				F8132D601CE9B88800E33B5B /* ViewController.swift */,
+				F82795D41CEC10BE00FD887B /* HandleJson.swift */,
+				F8132D601CE9B88800E33B5B /* ChatViewController.swift */,
 				F8C4902D1CEABC10009F82C6 /* TuringRobot.swift */,
 				F8132D621CE9B88800E33B5B /* Main.storyboard */,
 				F8132D681CE9B88800E33B5B /* Assets.xcassets */,
@@ -394,7 +397,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8132D611CE9B88800E33B5B /* ViewController.swift in Sources */,
+				F82795D51CEC10BE00FD887B /* HandleJson.swift in Sources */,
+				F8132D611CE9B88800E33B5B /* ChatViewController.swift in Sources */,
 				F8C4902E1CEABC10009F82C6 /* TuringRobot.swift in Sources */,
 				F8132D5F1CE9B88800E33B5B /* AppDelegate.swift in Sources */,
 				F8132D671CE9B88800E33B5B /* SpeechRobot.xcdatamodeld in Sources */,
