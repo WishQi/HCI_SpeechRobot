@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="e9m-dM-DbX">
             <objects>
-                <viewController id="7Yr-RS-BcF" customClass="JSQViewController" customModule="SpeechRobot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7Yr-RS-BcF" customClass="ChatViewController" customModule="SpeechRobot" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bli-ZN-f8l"/>
                         <viewControllerLayoutGuide type="bottom" id="ejL-fa-FLT"/>
@@ -21,7 +21,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbK-zK-C3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="800" y="120"/>
+            <point key="canvasLocation" x="813" y="120"/>
         </scene>
     </scenes>
 </document>

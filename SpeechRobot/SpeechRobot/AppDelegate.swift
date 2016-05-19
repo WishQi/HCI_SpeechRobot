@@ -18,7 +18,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-//        IFlySpeechUtility.createUtility("appid=5737dfdd")
+        IFlySpeechUtility.createUtility("appid=5737dfdd")
+        
+        let chatViewController = ChatViewController()
+        chatViewController.title = "聪明的科滟儿"
+        
+        UINavigationBar.appearance().tintColor = UIColor.clearColor()
+        UINavigationBar.appearance().barTintColor = UIColor.clearColor()
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+//        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+        
+        let navigationViewController: UINavigationController = UINavigationController(rootViewController: chatViewController)
+        let frame = UIScreen.mainScreen().bounds
+        window = UIWindow(frame: frame)
+        window?.rootViewController = navigationViewController
+        window?.makeKeyAndVisible()
         
         return true
     }

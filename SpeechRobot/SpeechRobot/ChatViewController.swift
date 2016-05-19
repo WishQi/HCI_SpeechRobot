@@ -7,19 +7,19 @@
 //
 
 import UIKit
+import JSQMessagesViewController
 
-class ChatViewController: UIViewController, IFlySpeechRecognizerDelegate, IFlySpeechSynthesizerDelegate, TuringRobotDelegate {
+class ChatViewController: JSQMessagesViewController, IFlySpeechRecognizerDelegate, IFlySpeechSynthesizerDelegate, TuringRobotDelegate {
     
     var iflySpeechRecognizer = IFlySpeechRecognizer()
     var iflySpeechSynthesizer = IFlySpeechSynthesizer()
     
     var superView = UIView()
     
+    var backgroundImageView: UIImageView!
+    
     var beginSpeakingButton = UIButton()
     var stopSpeakingButton = UIButton()
-    
-    var recognizeResultsTextView = UITextView()
-    var responseResultsTextView = UITextView()
     
     var recognizedResults = ""
     var speechRobotWords = ""
@@ -27,67 +27,52 @@ class ChatViewController: UIViewController, IFlySpeechRecognizerDelegate, IFlySp
     let turingRobot = TuringRobot()
     let jsonHandle = HandleJson()
     
+    var messages = [JSQMessage]()
+    
     var responseData = TuringRobot.ResponseData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         superView = self.view
         
+        let background = UIImage(named: "1.pic")
+        backgroundImageView = UIImageView(image: background)
+        superView.addSubview(backgroundImageView)
+        self.view.sendSubviewToBack(backgroundImageView)
+        collectionView.backgroundColor = UIColor.clearColor()
+        self.view.backgroundColor = UIColor.clearColor()
+        
         turingRobot.delegate = self
         
-        configureUI()
+        senderId = "729981607"
+        senderDisplayName = "Limaoqi"
         
         configureSpeechRecognizer()
         configureSpeechSynthesizer()
-        
-        realizeButtons()
     }
     
-    func configureUI() {
-        
-        superView.addSubview(beginSpeakingButton)
-        beginSpeakingButton.frame.size = CGSize(width: 200, height: 100)
-        beginSpeakingButton.center = superView.center
-        beginSpeakingButton.setTitle("Begin Speaking", forState: .Normal)
-        beginSpeakingButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        beginSpeakingButton.layer.borderWidth = CGFloat(3)
-        beginSpeakingButton.layer.borderColor = UIColor.blackColor().CGColor
-        beginSpeakingButton.layer.cornerRadius = 10
-        
-        superView.addSubview(stopSpeakingButton)
-        stopSpeakingButton.frame.size = CGSize(width: 200, height: 100)
-        stopSpeakingButton.frame.origin.y = beginSpeakingButton.frame.maxY + 10
-        stopSpeakingButton.center.x = superView.center.x
-        stopSpeakingButton.setTitle("Stop Speaking", forState: .Normal)
-        stopSpeakingButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        stopSpeakingButton.layer.borderWidth = CGFloat(3)
-        stopSpeakingButton.layer.borderColor = UIColor.blackColor().CGColor
-        stopSpeakingButton.layer.cornerRadius = 10
-        
-        superView.addSubview(recognizeResultsTextView)
-        recognizeResultsTextView.frame.size = CGSize(width: 200, height: 100)
-        recognizeResultsTextView.frame.origin.y = stopSpeakingButton.frame.maxY + 10
-        recognizeResultsTextView.center.x = superView.center.x
-        recognizeResultsTextView.backgroundColor = UIColor.clearColor()
-        recognizeResultsTextView.textColor = UIColor.blackColor()
-        recognizeResultsTextView.layer.cornerRadius = 10
-        recognizeResultsTextView.layer.borderColor = UIColor.blackColor().CGColor
-        recognizeResultsTextView.layer.borderWidth = CGFloat(3)
-        
-        superView.addSubview(responseResultsTextView)
-        responseResultsTextView.frame.size = CGSize(width: 200, height: 100)
-        responseResultsTextView.center.y = superView.center.y - 120
-        responseResultsTextView.center.x = superView.center.x
-        responseResultsTextView.backgroundColor = UIColor.clearColor()
-        responseResultsTextView.textColor = UIColor.blackColor()
-        responseResultsTextView.layer.cornerRadius = 10
-        responseResultsTextView.layer.borderColor = UIColor.blackColor().CGColor
-        responseResultsTextView.layer.borderWidth = CGFloat(3)
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
     }
     
-    func realizeButtons() {
-        beginSpeakingButton.addTarget(self, action: #selector(pressTheStartButton), forControlEvents: .TouchUpInside)
-        stopSpeakingButton.addTarget(self, action: #selector(pressTheStopButton), forControlEvents: .TouchUpInside)
+    override func didPressAccessoryButton(sender: UIButton!) {
+        pressTheStartButton()
+    }
+    
+    override func didPressSendButton(button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: NSDate!) {
+        
+        let message = JSQMessage.init(senderId: senderId, displayName: senderDisplayName, text: text)
+        
+        recognizedResults = text
+        
+        sendTheUserWordsToTuringRobot()
+        
+        messages.append(message)
+        
+        let indexPath = NSIndexPath(forRow: messages.count - 1, inSection: 0)
+        let indexPaths = [indexPath]
+        collectionView.insertItemsAtIndexPaths(indexPaths)
+        finishSendingMessage()
     }
     
     func pressTheStartButton() {
@@ -133,11 +118,22 @@ class ChatViewController: UIViewController, IFlySpeechRecognizerDelegate, IFlySp
         if responseData.detailurl != "" {
             speechRobotWords += responseData.detailurl
         }
-        responseResultsTextView.text = speechRobotWords
         recognizedResults = ""
-        iflySpeechSynthesizer.startSpeaking(speechRobotWords)
+        
+        updateMessage(speechRobotWords)
+
+        iflySpeechSynthesizer.startSpeaking(responseData.text)
     }
     
+    func updateMessage(text: String) {
+        let message = JSQMessage.init(senderId: senderId, displayName: senderDisplayName, text: text)
+        messages.append(message)
+        
+        let indexPath = NSIndexPath(forRow: messages.count - 1, inSection: 0)
+        let indexPaths = [indexPath]
+        collectionView.insertItemsAtIndexPaths(indexPaths)
+        finishSendingMessage()
+    }
     
     func sendTheUserWordsToTuringRobot() {
         turingRobot.getTheUserWords(recognizedResults)
@@ -150,8 +146,8 @@ class ChatViewController: UIViewController, IFlySpeechRecognizerDelegate, IFlySp
             recognizedResults = jsonHandle.handleTheUserWords(results, previous: recognizedResults)
         }
         if isLast {
+            updateMessage(recognizedResults)
             sendTheUserWordsToTuringRobot()
-            recognizeResultsTextView.text = recognizedResults
         }
     }
     
@@ -163,6 +159,39 @@ class ChatViewController: UIViewController, IFlySpeechRecognizerDelegate, IFlySp
     }
 
     func onCompleted(error: IFlySpeechError!) {
+    }
+    
+    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> JSQMessagesCollectionViewCell {
+        
+        let cell = super.collectionView(collectionView, cellForItemAtIndexPath: indexPath) as! JSQMessagesCollectionViewCell
+        
+        cell.backgroundColor = UIColor.clearColor()
+        
+        cell.textView.textColor = UIColor.whiteColor()
+        
+        print(cell.reuseIdentifier)
+        
+        return cell
+    }
+    
+    override func collectionView(collectionView: JSQMessagesCollectionView!, messageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageData! {
+        return messages[indexPath.row]
+    }
+    
+    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return messages.count
+    }
+    
+    
+    override func collectionView(collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageBubbleImageDataSource! {
+        return nil
+    }
+    
+    override func collectionView(collectionView: JSQMessagesCollectionView!, didDeleteMessageAtIndexPath indexPath: NSIndexPath!) {
+    }
+    
+    override func collectionView(collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageAvatarImageDataSource! {
+        return nil
     }
 
 }

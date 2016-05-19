@@ -11,7 +11,6 @@ import Alamofire
 
 
 protocol TuringRobotDelegate: class {
-//    func updateResponseData()
     func updateUIAndData()
 }
 
@@ -50,7 +49,6 @@ class TuringRobot {
                 
             }
         }
-        
     }
     
     func getTheData() -> ResponseData {
