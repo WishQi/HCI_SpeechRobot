@@ -10,6 +10,6 @@
 #define SpeechRobot_Bridging_Header_h
 
 #import "iflyMSC/IFlyMSC.h"
-
+#import <JSQMessagesViewController/JSQMessages.h>
 
 #endif /* SpeechRobot_Bridging_Header_h */

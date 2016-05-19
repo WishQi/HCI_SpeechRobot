@@ -85,9 +85,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-SpeechRobot/Alamofire.framework"
+  install_framework "Pods-SpeechRobot/JSQMessagesViewController.framework"
+  install_framework "Pods-SpeechRobot/JSQSystemSoundPlayer.framework"
   install_framework "Pods-SpeechRobot/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-SpeechRobot/Alamofire.framework"
+  install_framework "Pods-SpeechRobot/JSQMessagesViewController.framework"
+  install_framework "Pods-SpeechRobot/JSQSystemSoundPlayer.framework"
   install_framework "Pods-SpeechRobot/SwiftyJSON.framework"
 fi

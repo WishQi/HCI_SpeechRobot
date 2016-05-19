@@ -8,7 +8,7 @@ target 'SpeechRobot' do
 
 pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 pod 'Alamofire', '~> 3.4'
-
+pod 'JSQMessagesViewController'
 end
 
 target 'SpeechRobotTests' do

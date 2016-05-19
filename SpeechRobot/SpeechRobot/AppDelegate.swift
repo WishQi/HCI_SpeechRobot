@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        IFlySpeechUtility.createUtility("appid=5737dfdd")
+//        IFlySpeechUtility.createUtility("appid=5737dfdd")
         
         return true
     }

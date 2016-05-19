@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '919534F9BA6008102640F1A2'
+               BlueprintIdentifier = 'EFC4A71D34C76AD0C27AEB3D'
                BlueprintName = 'Pods-SpeechRobot'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_SpeechRobot.framework'>
