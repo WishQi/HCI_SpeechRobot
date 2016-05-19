@@ -21,6 +21,8 @@ class ChatViewController: JSQMessagesViewController, IFlySpeechRecognizerDelegat
     var beginSpeakingButton = UIButton()
     var stopSpeakingButton = UIButton()
     
+    @IBOutlet weak var toolBar: UINavigationBar!
+    
     var recognizedResults = ""
     var speechRobotWords = ""
     
@@ -47,12 +49,15 @@ class ChatViewController: JSQMessagesViewController, IFlySpeechRecognizerDelegat
         senderId = "729981607"
         senderDisplayName = "Limaoqi"
         
+//        collectionV
+        
         configureSpeechRecognizer()
         configureSpeechSynthesizer()
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        self.automaticallyScrollsToMostRecentMessage = true
     }
     
     override func didPressAccessoryButton(sender: UIButton!) {
@@ -95,7 +100,7 @@ class ChatViewController: JSQMessagesViewController, IFlySpeechRecognizerDelegat
         iflySpeechSynthesizer.delegate = self
         iflySpeechSynthesizer.setParameter(IFlySpeechConstant.TYPE_CLOUD(), forKey: IFlySpeechConstant.ENGINE_TYPE())
         iflySpeechSynthesizer.setParameter("50", forKey: IFlySpeechConstant.VOLUME())
-        iflySpeechSynthesizer.setParameter("LiMaoqi", forKey: IFlySpeechConstant.VOICE_NAME())
+        iflySpeechSynthesizer.setParameter("xiaorong", forKey: IFlySpeechConstant.VOICE_NAME())
         iflySpeechSynthesizer.setParameter("tts.pcm", forKey: "/Users/limaoqi/Documents/用户技术/Voices")
     }
     

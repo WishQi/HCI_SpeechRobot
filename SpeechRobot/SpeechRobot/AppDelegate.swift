@@ -21,18 +21,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IFlySpeechUtility.createUtility("appid=5737dfdd")
         
         let chatViewController = ChatViewController()
-        chatViewController.title = "聪明的科滟儿"
-        
-        UINavigationBar.appearance().tintColor = UIColor.clearColor()
-        UINavigationBar.appearance().barTintColor = UIColor.clearColor()
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-//        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
-        
+
         let navigationViewController: UINavigationController = UINavigationController(rootViewController: chatViewController)
         let frame = UIScreen.mainScreen().bounds
         window = UIWindow(frame: frame)
         window?.rootViewController = navigationViewController
         window?.makeKeyAndVisible()
+        
+        chatViewController.title = "聪明的科滟儿"
+        chatViewController.navigationItem.titleView?.backgroundColor = UIColor.clearColor()
         
         return true
     }
