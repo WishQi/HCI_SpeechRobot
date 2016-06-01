@@ -31,8 +31,6 @@
 		F88B92EB1CE9BFFC009A4874 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F88B92EA1CE9BFFC009A4874 /* libz.tbd */; };
 		F88B92ED1CE9C019009A4874 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F88B92EC1CE9C019009A4874 /* libc++.tbd */; };
 		F8AA3B411CED4E4F009B468F /* JSQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AA3B401CED4E4F009B468F /* JSQViewController.swift */; };
-		F8AA3B431CED64D4009B468F /* UserWordsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AA3B421CED64D4009B468F /* UserWordsCollectionViewCell.swift */; };
-		F8AA3B451CED652C009B468F /* RobotWordsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AA3B441CED652C009B468F /* RobotWordsCollectionViewCell.swift */; };
 		F8C4902E1CEABC10009F82C6 /* TuringRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4902D1CEABC10009F82C6 /* TuringRobot.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,8 +85,6 @@
 		F88B92EA1CE9BFFC009A4874 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		F88B92EC1CE9C019009A4874 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		F8AA3B401CED4E4F009B468F /* JSQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSQViewController.swift; sourceTree = "<group>"; };
-		F8AA3B421CED64D4009B468F /* UserWordsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserWordsCollectionViewCell.swift; sourceTree = "<group>"; };
-		F8AA3B441CED652C009B468F /* RobotWordsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobotWordsCollectionViewCell.swift; sourceTree = "<group>"; };
 		F8C4902D1CEABC10009F82C6 /* TuringRobot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TuringRobot.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -192,8 +188,6 @@
 				F8132D601CE9B88800E33B5B /* ChatViewController.swift */,
 				F8C4902D1CEABC10009F82C6 /* TuringRobot.swift */,
 				F8AA3B401CED4E4F009B468F /* JSQViewController.swift */,
-				F8AA3B421CED64D4009B468F /* UserWordsCollectionViewCell.swift */,
-				F8AA3B441CED652C009B468F /* RobotWordsCollectionViewCell.swift */,
 				F8AA3B461CED6569009B468F /* Supporting Files */,
 			);
 			path = SpeechRobot;
@@ -418,8 +412,6 @@
 				F8132D611CE9B88800E33B5B /* ChatViewController.swift in Sources */,
 				F8C4902E1CEABC10009F82C6 /* TuringRobot.swift in Sources */,
 				F8132D5F1CE9B88800E33B5B /* AppDelegate.swift in Sources */,
-				F8AA3B431CED64D4009B468F /* UserWordsCollectionViewCell.swift in Sources */,
-				F8AA3B451CED652C009B468F /* RobotWordsCollectionViewCell.swift in Sources */,
 				F8132D671CE9B88800E33B5B /* SpeechRobot.xcdatamodeld in Sources */,
 				F8AA3B411CED4E4F009B468F /* JSQViewController.swift in Sources */,
 			);
