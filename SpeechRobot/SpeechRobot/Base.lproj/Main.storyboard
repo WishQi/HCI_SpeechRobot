@@ -1,11 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7Yr-RS-BcF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qem-by-iIU">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Chat View Controller-->
+        <!--Enter View Controller-->
+        <scene sceneID="xx1-0D-07R">
+            <objects>
+                <viewController id="qem-by-iIU" customClass="EnterViewController" customModule="SpeechRobot" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EY1-oe-fWG"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Cm-1f-8ma"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d7U-LC-3Nb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="H17-jF-7tM" kind="show" identifier="enter" id="UmG-Vn-cvm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vUV-Q1-8gU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="421" y="103"/>
+        </scene>
+        <!--帅气的图图-->
         <scene sceneID="e9m-dM-DbX">
             <objects>
                 <viewController id="7Yr-RS-BcF" customClass="ChatViewController" customModule="SpeechRobot" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,23 +37,31 @@
                     <view key="view" contentMode="scaleToFill" id="YGT-4B-WEA">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gXL-IH-hxG">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="聪明的科滟儿" id="dGj-qw-OkO"/>
-                                </items>
-                            </navigationBar>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <outlet property="toolBar" destination="gXL-IH-hxG" id="qfo-ME-36b"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="帅气的图图" id="kl7-Yn-qnt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbK-zK-C3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="813" y="120"/>
+            <point key="canvasLocation" x="1960" y="103"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="U8u-N5-PFy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H17-jF-7tM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CfH-cw-0wj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7Yr-RS-BcF" kind="relationship" relationship="rootViewController" id="SiW-iy-eLx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cxt-VN-J3D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1148" y="103"/>
         </scene>
     </scenes>
 </document>

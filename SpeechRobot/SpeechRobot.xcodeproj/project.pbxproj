@@ -12,14 +12,12 @@
 		F8132D611CE9B88800E33B5B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8132D601CE9B88800E33B5B /* ChatViewController.swift */; };
 		F8132D641CE9B88800E33B5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8132D621CE9B88800E33B5B /* Main.storyboard */; };
 		F8132D671CE9B88800E33B5B /* SpeechRobot.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8132D651CE9B88800E33B5B /* SpeechRobot.xcdatamodeld */; };
-		F8132D691CE9B88800E33B5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8132D681CE9B88800E33B5B /* Assets.xcassets */; };
 		F8132D6C1CE9B88800E33B5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8132D6A1CE9B88800E33B5B /* LaunchScreen.storyboard */; };
 		F8132D771CE9B88800E33B5B /* SpeechRobotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8132D761CE9B88800E33B5B /* SpeechRobotTests.swift */; };
 		F8132D821CE9B88800E33B5B /* SpeechRobotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8132D811CE9B88800E33B5B /* SpeechRobotUITests.swift */; };
 		F82795D51CEC10BE00FD887B /* HandleJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82795D41CEC10BE00FD887B /* HandleJson.swift */; };
 		F88286691CEB5E34001575B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88286681CEB5E34001575B7 /* Foundation.framework */; };
 		F882866B1CEB5E4C001575B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F882866A1CEB5E4C001575B7 /* UIKit.framework */; };
-		F88B92D91CE9BE45009A4874 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88B92D81CE9BE45009A4874 /* iflyMSC.framework */; };
 		F88B92DB1CE9BF36009A4874 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88B92DA1CE9BF36009A4874 /* CoreLocation.framework */; };
 		F88B92DD1CE9BF56009A4874 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88B92DC1CE9BF56009A4874 /* CoreTelephony.framework */; };
 		F88B92DF1CE9BF5D009A4874 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88B92DE1CE9BF5D009A4874 /* AVFoundation.framework */; };
@@ -30,8 +28,10 @@
 		F88B92E91CE9BFA1009A4874 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88B92E81CE9BFA1009A4874 /* CoreGraphics.framework */; };
 		F88B92EB1CE9BFFC009A4874 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F88B92EA1CE9BFFC009A4874 /* libz.tbd */; };
 		F88B92ED1CE9C019009A4874 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F88B92EC1CE9C019009A4874 /* libc++.tbd */; };
-		F8AA3B411CED4E4F009B468F /* JSQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AA3B401CED4E4F009B468F /* JSQViewController.swift */; };
 		F8C4902E1CEABC10009F82C6 /* TuringRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4902D1CEABC10009F82C6 /* TuringRobot.swift */; };
+		F8E4BE6A1D101B220027ABAA /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E4BE651D1019E20027ABAA /* iflyMSC.framework */; };
+		F8E4BE6C1D101CF30027ABAA /* EnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E4BE6B1D101CF30027ABAA /* EnterViewController.swift */; };
+		F8E4BE6E1D103C2C0027ABAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8E4BE6D1D103C2C0027ABAA /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +60,6 @@
 		F8132D601CE9B88800E33B5B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		F8132D631CE9B88800E33B5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F8132D661CE9B88800E33B5B /* SpeechRobot.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SpeechRobot.xcdatamodel; sourceTree = "<group>"; };
-		F8132D681CE9B88800E33B5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8132D6B1CE9B88800E33B5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8132D6D1CE9B88800E33B5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8132D721CE9B88800E33B5B /* SpeechRobotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeechRobotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,7 +72,6 @@
 		F88286681CEB5E34001575B7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F882866A1CEB5E4C001575B7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F88B92D71CE9BCEB009A4874 /* SpeechRobot-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpeechRobot-Bridging-Header.h"; sourceTree = "<group>"; };
-		F88B92D81CE9BE45009A4874 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iflyMSC.framework; path = ../../ConfigurationFiles/iOS_voice_1128_5737dfdd/lib/iflyMSC.framework; sourceTree = "<group>"; };
 		F88B92DA1CE9BF36009A4874 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F88B92DC1CE9BF56009A4874 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		F88B92DE1CE9BF5D009A4874 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -84,8 +82,10 @@
 		F88B92E81CE9BFA1009A4874 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		F88B92EA1CE9BFFC009A4874 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		F88B92EC1CE9C019009A4874 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		F8AA3B401CED4E4F009B468F /* JSQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSQViewController.swift; sourceTree = "<group>"; };
 		F8C4902D1CEABC10009F82C6 /* TuringRobot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TuringRobot.swift; sourceTree = "<group>"; };
+		F8E4BE651D1019E20027ABAA /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iflyMSC.framework; path = ../../../../Configurations/iOS_voice_1128_5737dfdd/lib/iflyMSC.framework; sourceTree = "<group>"; };
+		F8E4BE6B1D101CF30027ABAA /* EnterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterViewController.swift; sourceTree = "<group>"; };
+		F8E4BE6D1D103C2C0027ABAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +105,8 @@
 				F88B92DF1CE9BF5D009A4874 /* AVFoundation.framework in Frameworks */,
 				F88B92DD1CE9BF56009A4874 /* CoreTelephony.framework in Frameworks */,
 				F88B92DB1CE9BF36009A4874 /* CoreLocation.framework in Frameworks */,
-				F88B92D91CE9BE45009A4874 /* iflyMSC.framework in Frameworks */,
 				52178E87FFC80B18B303A5B7 /* Pods_SpeechRobot.framework in Frameworks */,
+				F8E4BE6A1D101B220027ABAA /* iflyMSC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +139,7 @@
 		78ADFA22EA12F53B1CBCA3FB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F8E4BE651D1019E20027ABAA /* iflyMSC.framework */,
 				F882866A1CEB5E4C001575B7 /* UIKit.framework */,
 				F88286681CEB5E34001575B7 /* Foundation.framework */,
 				7C2FADC816A3E06E36650A26 /* Pods_SpeechRobot.framework */,
@@ -160,7 +161,6 @@
 				F88B92DE1CE9BF5D009A4874 /* AVFoundation.framework */,
 				F88B92DC1CE9BF56009A4874 /* CoreTelephony.framework */,
 				F88B92DA1CE9BF36009A4874 /* CoreLocation.framework */,
-				F88B92D81CE9BE45009A4874 /* iflyMSC.framework */,
 				F8132D5D1CE9B88800E33B5B /* SpeechRobot */,
 				F8132D751CE9B88800E33B5B /* SpeechRobotTests */,
 				F8132D801CE9B88800E33B5B /* SpeechRobotUITests */,
@@ -183,11 +183,11 @@
 		F8132D5D1CE9B88800E33B5B /* SpeechRobot */ = {
 			isa = PBXGroup;
 			children = (
+				F8E4BE6B1D101CF30027ABAA /* EnterViewController.swift */,
 				F8132D5E1CE9B88800E33B5B /* AppDelegate.swift */,
 				F82795D41CEC10BE00FD887B /* HandleJson.swift */,
 				F8132D601CE9B88800E33B5B /* ChatViewController.swift */,
 				F8C4902D1CEABC10009F82C6 /* TuringRobot.swift */,
-				F8AA3B401CED4E4F009B468F /* JSQViewController.swift */,
 				F8AA3B461CED6569009B468F /* Supporting Files */,
 			);
 			path = SpeechRobot;
@@ -214,8 +214,8 @@
 		F8AA3B461CED6569009B468F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F8E4BE6D1D103C2C0027ABAA /* Assets.xcassets */,
 				F8132D621CE9B88800E33B5B /* Main.storyboard */,
-				F8132D681CE9B88800E33B5B /* Assets.xcassets */,
 				F8132D6A1CE9B88800E33B5B /* LaunchScreen.storyboard */,
 				F8132D6D1CE9B88800E33B5B /* Info.plist */,
 				F8132D651CE9B88800E33B5B /* SpeechRobot.xcdatamodeld */,
@@ -334,7 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8132D6C1CE9B88800E33B5B /* LaunchScreen.storyboard in Resources */,
-				F8132D691CE9B88800E33B5B /* Assets.xcassets in Resources */,
+				F8E4BE6E1D103C2C0027ABAA /* Assets.xcassets in Resources */,
 				F8132D641CE9B88800E33B5B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,12 +408,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8E4BE6C1D101CF30027ABAA /* EnterViewController.swift in Sources */,
 				F82795D51CEC10BE00FD887B /* HandleJson.swift in Sources */,
 				F8132D611CE9B88800E33B5B /* ChatViewController.swift in Sources */,
 				F8C4902E1CEABC10009F82C6 /* TuringRobot.swift in Sources */,
 				F8132D5F1CE9B88800E33B5B /* AppDelegate.swift in Sources */,
 				F8132D671CE9B88800E33B5B /* SpeechRobot.xcdatamodeld in Sources */,
-				F8AA3B411CED4E4F009B468F /* JSQViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,7 +557,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = /Users/limaoqi/ConfigurationFiles/iOS_voice_1128_5737dfdd/lib;
+				FRAMEWORK_SEARCH_PATHS = /Users/limaoqi/Configurations/iOS_voice_1128_5737dfdd/lib;
 				INFOPLIST_FILE = SpeechRobot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.maoqiLi.SpeechRobot;
@@ -572,7 +572,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = /Users/limaoqi/ConfigurationFiles/iOS_voice_1128_5737dfdd/lib;
+				FRAMEWORK_SEARCH_PATHS = /Users/limaoqi/Configurations/iOS_voice_1128_5737dfdd/lib;
 				INFOPLIST_FILE = SpeechRobot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.maoqiLi.SpeechRobot;

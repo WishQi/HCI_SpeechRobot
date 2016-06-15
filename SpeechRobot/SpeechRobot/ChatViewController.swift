@@ -37,7 +37,7 @@ class ChatViewController: JSQMessagesViewController, IFlySpeechRecognizerDelegat
         super.viewDidLoad()
         superView = self.view
         
-        let background = UIImage(named: "1.pic")
+        let background = UIImage(named: "background.png")
         backgroundImageView = UIImageView(image: background)
         superView.addSubview(backgroundImageView)
         self.view.sendSubviewToBack(backgroundImageView)
@@ -48,8 +48,6 @@ class ChatViewController: JSQMessagesViewController, IFlySpeechRecognizerDelegat
         
         senderId = "729981607"
         senderDisplayName = "Limaoqi"
-        
-//        collectionV
         
         configureSpeechRecognizer()
         configureSpeechSynthesizer()
@@ -100,7 +98,7 @@ class ChatViewController: JSQMessagesViewController, IFlySpeechRecognizerDelegat
         iflySpeechSynthesizer.delegate = self
         iflySpeechSynthesizer.setParameter(IFlySpeechConstant.TYPE_CLOUD(), forKey: IFlySpeechConstant.ENGINE_TYPE())
         iflySpeechSynthesizer.setParameter("50", forKey: IFlySpeechConstant.VOLUME())
-        iflySpeechSynthesizer.setParameter("xiaorong", forKey: IFlySpeechConstant.VOICE_NAME())
+        iflySpeechSynthesizer.setParameter("xiaoyan", forKey: IFlySpeechConstant.VOICE_NAME())
         iflySpeechSynthesizer.setParameter("tts.pcm", forKey: "/Users/limaoqi/Documents/用户技术/Voices")
     }
     

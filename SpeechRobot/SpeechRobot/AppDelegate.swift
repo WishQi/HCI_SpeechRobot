@@ -20,16 +20,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         IFlySpeechUtility.createUtility("appid=5737dfdd")
         
-        let chatViewController = ChatViewController()
-
-        let navigationViewController: UINavigationController = UINavigationController(rootViewController: chatViewController)
-        let frame = UIScreen.mainScreen().bounds
-        window = UIWindow(frame: frame)
-        window?.rootViewController = navigationViewController
-        window?.makeKeyAndVisible()
-        
-        chatViewController.title = "聪明的科滟儿"
-        chatViewController.navigationItem.titleView?.backgroundColor = UIColor.clearColor()
+//        let chatViewController = ChatViewController()
+//
+////        let navigationViewController: UINavigationController = UINavigationController(rootViewController: chatViewController)
+////        let frame = UIScreen.mainScreen().bounds
+////        window = UIWindow(frame: frame)
+////        window?.rootViewController = navigationViewController
+////        window?.makeKeyAndVisible()
+//        
+//        chatViewController.title = ""
+//        chatViewController.navigationItem.titleView?.backgroundColor = UIColor.clearColor()
         
         return true
     }
