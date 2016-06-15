@@ -43,16 +43,19 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbK-zK-C3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1960" y="103"/>
+            <point key="canvasLocation" x="1889" y="103"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="U8u-N5-PFy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H17-jF-7tM" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CfH-cw-0wj">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" id="CfH-cw-0wj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
